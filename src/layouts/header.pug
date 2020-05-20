@@ -3,16 +3,19 @@ header.header
     .header-wrap
       .header__logo
         include logo
-      .header-contacts
-        .header-contacts__phone
-          .header__icon
-            img(src="img/header/phone.svg" alt="phone icon")
-          a(href="tel:+7(800)555-06-75" target="_blank") +7 (800) 555-06-75
-        .header-contacts__mail
-          .header__icon
-            img(src="img/header/mail.svg" alt="mail icon")
-          a(href="mailto:sales@selectel.ru" target="_blank") Написать на почту
-        .header-contacts__telegram
-          .header__icon
-            img(src="img/header/telegram.svg" alt="telegram icon")
-          a(href="https://t.me/Selectel" target="_blank") Написать в Telegram
+      ul.list.header-contacts
+        li.header-contacts__phone
+          a(href="tel:+7(800)555-06-75" target="_blank")
+            .header__icon
+              img(src="img/header/phone.svg" alt="phone_icon")
+            span +7 (800) 555-06-75
+        li.header-contacts__mail
+          a(href="mailto:sales@selectel.ru" target="_blank")
+            .header__icon
+              img(src="img/header/mail.svg" alt="mail_icon")
+            span Написать на почту
+        li.header-contacts__telegram
+          a(href="https://t.me/Selectel" target="_blank")
+            .header__icon
+              img(src="img/header/telegram.svg" alt="telegram_icon")
+            span Написать в Telegram
