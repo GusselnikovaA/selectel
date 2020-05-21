@@ -379,6 +379,7 @@ html {
 
 body {
   font-family: 'GothamPro', sans-serif;
+  color: #29435D;
 }
 
 img {
@@ -392,8 +393,7 @@ a {
 }
 
 .container {
-  max-width: 940px;
-  width: 90%;
+  max-width: 900px;
   margin: auto;
 }
 
@@ -419,6 +419,10 @@ a {
   cursor: pointer;
   background: transparent;
   border: none;
+}
+
+.input {
+  outline: none;
 }
 
 .header {
@@ -496,9 +500,232 @@ a {
   font-size: 14px;
 }
 
+.config {
+  padding-bottom: 60px;
+}
+
 .config__title {
   text-align: center;
   margin-bottom: 60px;
+}
+
+.config-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.config-range {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 367px;
+  margin-right: 58px;
+  width: 40%;
+  position: relative;
+}
+
+.config-range__subtitle {
+  font-size: 18px;
+}
+
+.config-range__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.config-range__line {
+  width: 246px;
+  height: 2px;
+  margin-top: 10px;
+  background-color: #C8C8C8;
+  border-radius: 3px;
+  position: relative;
+}
+
+.config-range__line_active {
+  position: absolute;
+  height: 2px;
+  width: 50%;
+  background-color: #2F93FE;
+}
+
+.config-range__roller {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.18);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.18);
+  background-color: #ffffff;
+  margin: auto;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.config-range__roller:active {
+  width: 15px;
+  height: 15px;
+}
+
+.config-range__value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 13px;
+  right: 0;
+  width: 246px;
+  font-size: 12px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.config-range__min, .config-range__max {
+  color: #C8C8C8;
+}
+
+.config-range__active {
+  padding-top: 10px;
+}
+
+.config-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+}
+
+.config-checkbox__item {
+  position: relative;
+}
+
+.config-checkbox__subtitle {
+  font-size: 16px;
+  position: relative;
+  padding-left: 30px;
+  text-transform: uppercase;
+}
+
+.config-checkbox__input[type='checkbox'] {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  z-index: 4;
+  opacity: 0;
+}
+
+.config-checkbox__input[type='checkbox'] + .config-checkbox__subtitle::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background-image: url("../img/config/unchecked.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.config-checkbox__input[type="checkbox"]:checked + .config-checkbox__subtitle::before {
+  background-image: url("../img/config/checked.svg");
+}
+
+.config-checkbox__input[type="checkbox"]:disabled + .config-checkbox__subtitle::before {
+  background-image: url("../img/config/disabled.svg");
+}
+
+.performance {
+  padding-bottom: 80px;
+}
+
+.performance__title {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.card-wrap {
+  border: 1px solid #8391B2;
+  border-radius: 7px;
+  padding: 24px 14px;
+  font-size: 14px;
+}
+
+.card__wrap {
+  margin-bottom: 12px;
+}
+
+.card__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.card-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-description__item {
+  margin: 0;
+  max-width: 128px;
+}
+
+.card__order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__price {
+  font-family: 'GothamPro Bold', sans-serif;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.card__button {
+  max-width: 76px;
+  color: #2F93FE;
+  border: 1px solid #2F93FE;
+  border-radius: 6px;
+  font-size: 10px;
+  padding: 7px 13px;
+  text-align: center;
 }
 
 .footer {

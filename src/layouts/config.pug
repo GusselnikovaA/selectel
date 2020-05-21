@@ -1,3 +1,27 @@
 section.config
   .container 
     h1.title.config__title Доступные конфигурации
+    form.config-form
+      div.config-wrap 
+      
+        .config-range
+          .config-range__slider
+            span.config-range__subtitle vCPU
+            .config-range__line
+              .config-range__line_active
+              .config-range__roller
+          .config-range__value
+            span.config-range__min 2
+            span.config-range__active 6 ядер
+            span.config-range__max 12
+
+        .config-checkbox
+          .config-checkbox__item
+            input.config-checkbox__input(type="checkbox" id='gpu')
+            label.config-checkbox__subtitle(for=gpu) GPU
+          .config-checkbox__item
+            input.config-checkbox__input(type="checkbox"  id='raid')
+            label.config-checkbox__subtitle(for=raid) RAID
+          .config-checkbox__item
+            input.config-checkbox__input(type="checkbox"  id='ssd')
+            label.config-checkbox__subtitle(for=ssd) SSD

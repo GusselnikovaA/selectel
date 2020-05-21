@@ -1,4 +1,118 @@
 .config 
+  padding-bottom: 60px
   &__title 
     text-align: center
     margin-bottom: 60px
+
+  &-wrap 
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &-range 
+    display: flex
+    flex-direction: column
+    max-width: 367px
+    margin-right: 58px
+    width: 40%
+    position: relative
+
+    &__subtitle
+      font-size: 18px
+
+    &__slider 
+      display: flex
+      justify-content: space-between
+
+    &__line 
+      width: 246px
+      height: 2px 
+      margin-top: 10px
+      background-color: $disable-color
+      border-radius: 3px
+      position: relative
+
+      &_active 
+        position: absolute
+        height: 2px
+        width: 50%
+        background-color: $main-color
+        z-index 1
+
+    &__roller
+      position absolute
+      width: 12px 
+      height: 12px
+      border-radius: 50%
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.18)
+      background-color: $light-text-color
+      margin: auto
+      transform: translate(0, -50%)
+      z-index 2
+      &:active 
+        width: 15px 
+        height: 15px
+
+
+    &__value 
+      display: flex
+      position: absolute
+      top: 13px
+      right: 0
+      width: 246px
+      font-size: 12px
+      justify-content: space-between
+
+    &__min, &__max 
+      color: $disable-color
+
+    &__active 
+      padding-top: 10px
+
+  &-checkbox 
+    display: flex
+    justify-content: space-around
+    align-items: center
+    width: 60%
+
+    &__item 
+      position: relative
+
+    &__subtitle
+      font-size: 16px
+      position: relative
+      padding-left: 30px
+      text-transform: uppercase
+
+    &__input[type='checkbox']
+      position: absolute
+      top: 2px 
+      left: 2px
+      z-index: 4 
+      opacity: 0
+
+      & + .config-checkbox__subtitle::before
+        content: ''
+        width: 18px
+        height: 18px
+        position: absolute
+        top: 50%
+        left: 0
+        background-image: url('../img/config/unchecked.svg')
+        background-repeat: no-repeat
+        background-position: 0 0
+        transform: translateY(-50%)
+
+.config-checkbox__input[type="checkbox"]:checked
+  & + .config-checkbox__subtitle::before
+    background-image: url('../img/config/checked.svg')
+
+.config-checkbox__input[type="checkbox"]:disabled
+  & + .config-checkbox__subtitle::before
+    background-image: url('../img/config/disabled.svg')
+
+
+  
+
+
+
