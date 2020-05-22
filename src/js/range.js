@@ -34,7 +34,6 @@ thumb.onmousedown = function(event) {
 };
 
 thumb.ontouchstart = function(event) {
-  event.preventDefault(); // предотвратить запуск выделения (действие браузера)
 
   let shiftX = event.clientX - thumb.getBoundingClientRect().left; // shiftY здесь не нужен, слайдер двигается только по горизонтали
 
