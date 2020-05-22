@@ -13,13 +13,21 @@
     margin-bottom: 15px
     font-size: 14px
 
+  &__about 
+    display: flex
+    justify-content: space-between
+
   &-description
     display: flex
     justify-content: space-between
+    width: 55%
 
     &__item 
       margin: 0
       max-width: 128px
+
+  &__cpu 
+    max-width: 110px
 
   &__order 
     display: flex
@@ -44,6 +52,34 @@
   .card 
     &-wrap
       padding: 26px 11px
+    &__order 
+      padding-right: 15px
     &__price 
-      max-width: 60px
+      max-width: 65px
       margin-bottom: 7px
+
+@media (max-width: 562px)
+  .card
+    &-wrap 
+      font-size: 12px
+      padding: 16px
+    &__title 
+      font-size: 12px
+    &__about 
+      flex-direction: column
+    &-description 
+      width: 100%
+      flex-direction: column 
+      &__item 
+        max-width: 100%
+        margin-bottom: 26px
+    &__cpu 
+      max-width: 100%
+    &__order 
+      align-items: flex-start
+    &__price 
+      min-width: 100%
+      margin-bottom: 22px
+    &__button 
+      max-width: 102px
+      padding: 5px 30px

@@ -21,7 +21,7 @@
   &__button 
     background-color: $main-color 
     border-radius: 6px
-    padding: 9px 12px
+    padding: 9px 23px
     color: $light-text-color
     font-size: 14px
 
@@ -35,3 +35,14 @@
       max-width: 413px
     &__text 
       font-size: 16px
+
+@media (max-width: 562px)
+  .hero 
+    background-image: url('../img/hero/image-mobile.svg')
+    min-height: 394px
+    background-position: 80% 88%
+    padding: 32px 0
+    &__text 
+      font-size: 12px
+    &__button 
+      font-size: 10px
