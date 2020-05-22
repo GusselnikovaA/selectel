@@ -16,15 +16,15 @@ thumb.onmousedown = function(event) {
 
     // курсор вышел из слайдера => оставить бегунок в его границах.
     if (newLeft < 0) {
-      newLeft = 0;
+      newLeft = -3;
     }
     let rightEdge = slider.offsetWidth - thumb.offsetWidth;
     if (newLeft > rightEdge) {
-      newLeft = rightEdge;
+      newLeft = rightEdge + 3;
     }
 
-    thumb.style.left = newLeft + 'px';
-    activeSlider.style.width = newLeft + 'px';
+    thumb.style.left = newLeft + 3 + 'px';
+    activeSlider.style.width = newLeft + 3 + 'px';
   }
 
   function onMouseUp() {
@@ -41,7 +41,7 @@ thumb.ontouchstart = function(event) {
   document.addEventListener('touchend', onToucheEnd);
 
   function onToucheMove(event) {
-    let newLeft = event.clientX - shiftX - slider.getBoundingClientRect().left;
+    let newLeft = event.touches[0].clientX - shiftX - slider.getBoundingClientRect().left;
 
     // курсор вышел из слайдера => оставить бегунок в его границах.
     if (newLeft < 0) {
@@ -54,6 +54,7 @@ thumb.ontouchstart = function(event) {
 
     thumb.style.left = newLeft + 'px';
     activeSlider.style.width = newLeft + 'px';
+    result.innerHTML = 'yes';
   }
 
   function onToucheEnd() {

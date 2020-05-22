@@ -50,10 +50,14 @@ a
       &__phone, &__mail, &__telegram
         &:hover 
           a
-            color: $disable-color
+            color: $text-hover-color
+          .header__icon
+            fill: $text-hover-color
         &:active 
           a
             color: $dark-text-color
+          .header__icon
+            fill: $dark-text-color
 
   .hero 
     &__button 
@@ -79,14 +83,26 @@ a
         border: 1px solid $disable-color
 
   .footer
+    &-social
+      &__item 
+        &:hover 
+          cursor: pointer
+          .footer__icon
+            fill: $text-hover-color
+        &:active 
+          .footer__icon
+            fill: $dark-text-color
     &-nav 
       &__item 
         &:hover
           a 
-            color: $disable-color
+            color: $text-hover-color
         &:active
           a 
             color: $dark-text-color
+
+svg path
+  fill: inherit
 
 
 @media (max-width: 950px)

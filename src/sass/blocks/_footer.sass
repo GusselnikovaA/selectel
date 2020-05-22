@@ -18,6 +18,8 @@
       margin-right: 20px
       &:last-child 
         margin-right: 0
+  &__icon 
+    fill: $text-color
   &-nav 
     width: 78%
     &__list
@@ -49,7 +51,8 @@
       padding-left: 2px
       &__item 
         margin-right: 16px
-        width: 16px
+    &__icon
+      width: 16px
     &-nav 
       width: 79%
       &__item 
@@ -66,21 +69,29 @@
   .footer
     padding-top: 24px
     padding-bottom: 24px
+    &-wrap 
+      align-items: flex-start
     &-icons 
       width: 17%
     &__logo 
       width: 52px
-      margin-bottom: 20px
+      margin-bottom: 18px
     &-social 
       flex-wrap: wrap
+      justify-content: center
       &__item 
         margin-right: 0
-        margin-bottom: 13px
+        &:first-child, &:last-child
+          margin-right: 10px
+        &:nth-child(3)
+          order: 1
+          
     &-nav 
       padding-left: 28px
       &__item 
         width: 50%
         margin-right: 0
+        margin-bottom: 15px
         &:nth-child(2)
           order: 6
         &:nth-child(3)
