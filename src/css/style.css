@@ -425,6 +425,44 @@ a {
   outline: none;
 }
 
+@media (min-width: 992px) {
+  .header-contacts__phone:hover a, .header-contacts__mail:hover a, .header-contacts__telegram:hover a {
+    color: #C8C8C8;
+  }
+  .header-contacts__phone:active a, .header-contacts__mail:active a, .header-contacts__telegram:active a {
+    color: #29435D;
+  }
+  .hero__button:hover {
+    background-color: #71B6FF;
+  }
+  .hero__button:active {
+    background-color: #0971F5;
+  }
+  .hero__button:disable {
+    background-color: #C8C8C8;
+  }
+  .card__button:hover {
+    background-color: #B3D8FF;
+    color: #29435D;
+    border: 1px solid #29435D;
+  }
+  .card__button:active {
+    background-color: #71B6FF;
+    color: #29435D;
+    border: 1px solid #29435D;
+  }
+  .card__button:disable {
+    color: #C8C8C8;
+    border: 1px solid #C8C8C8;
+  }
+  .footer-nav__item:hover a {
+    color: #C8C8C8;
+  }
+  .footer-nav__item:active a {
+    color: #29435D;
+  }
+}
+
 @media (max-width: 950px) {
   .container {
     max-width: 708px;

@@ -44,7 +44,50 @@ a
   outline: none
 
 // HOVER ЭФФЕКТЫ 
-// @media (min-width: 992px)
+@media (min-width: 992px)
+  .header
+    &-contacts
+      &__phone, &__mail, &__telegram
+        &:hover 
+          a
+            color: $disable-color
+        &:active 
+          a
+            color: $dark-text-color
+
+  .hero 
+    &__button 
+      &:hover 
+        background-color: $main-hover-color 
+      &:active 
+        background-color: $main-press-color
+      &:disable 
+        background-color: $disable-color
+
+  .card 
+    &__button 
+      &:hover 
+        background-color: $main-hover-light-color
+        color: $dark-text-color
+        border: 1px solid $dark-text-color
+      &:active 
+        background-color: $main-hover-color
+        color: $dark-text-color
+        border: 1px solid $dark-text-color
+      &:disable 
+        color: $disable-color
+        border: 1px solid $disable-color
+
+  .footer
+    &-nav 
+      &__item 
+        &:hover
+          a 
+            color: $disable-color
+        &:active
+          a 
+            color: $dark-text-color
+
 
 @media (max-width: 950px)
   .container 
