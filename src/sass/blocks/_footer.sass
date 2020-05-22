@@ -19,18 +19,59 @@
       &:last-child 
         margin-right: 0
   &-nav 
-    width: 80%
+    width: 78%
     &__list
       display: flex
-      flex-wrap: wrap 
-      justify-content: space-between
+      flex-wrap: wrap
     &__item 
-      width: 23%
-      margin-right: 6px
-      margin-bottom: 25px
+      width: 128px
+      margin-right: 58px
+      margin-bottom: 24px
       line-height: 120%
+      font-size: 14px
       a 
         font-family: 'Museo', sans-serif
         color: $text-color
-        font-size: 14px
+      &:nth-child(4)
+        margin-right: 0
+      &:last-child
+        margin-right: 0
+
+@media (max-width: 950px)  
+  .footer 
+    padding-top: 30px
+    padding-bottom: 72px
+    &-icons 
+      min-height: 64px
+    &__logo 
+      width: 82px
+    &-social 
+      padding-left: 2px
+      &__item 
+        margin-right: 16px
+        width: 16px
+    &-nav 
+      width: 79%
+      &__item 
+        width: 117px
+        margin-right: 30px
+        margin-bottom: 18px
+        font-size: 12px
+        &:nth-child(4)
+          margin-right: 0
+        &:last-child
+          margin-right: 0
+
+@media (max-width: 562px)
+  .footer
+    &__logo 
+      width: 52px
+    &-social 
+      flex-wrap: wrap
+      &__item 
+        margin-right: 0
+    &-nav 
+      &__item 
+        width: 45%
+        margin-right: 0
 

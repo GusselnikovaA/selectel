@@ -1,5 +1,5 @@
 .config 
-  padding-bottom: 60px
+  padding-bottom: 66px
   &__title 
     text-align: center
     margin-bottom: 60px
@@ -13,7 +13,7 @@
     display: flex
     flex-direction: column
     max-width: 367px
-    margin-right: 58px
+    // margin-right: 58px
     width: 40%
     position: relative
 
@@ -110,6 +110,14 @@
 .config-checkbox__input[type="checkbox"]:disabled
   & + .config-checkbox__subtitle::before
     background-image: url('../img/config/disabled.svg')
+
+
+@media (max-width: 950px) 
+  .config
+    &__title 
+      margin-bottom: 45px
+    &-range 
+      width: 50%
 
 
   
