@@ -1,33 +1,32 @@
-const gpu = document.getElementById(gpu);
-const raid = document.getElementById(raid);
-const ssd = document.getElementById(ssd);
+const gpu = document.getElementById('gpu');
+const raid = document.getElementById('raid');
+const ssd = document.getElementById('ssd');
 const form =  document.querySelector('.config-form');
+let isSsd = false;
+let isGpu = false;
+let isRaid = false;
 
-function filter(gpuValue, raidValue, diskValue) {
-  container.innerHTML = '';
+function filter (gpuValue, raidValue, diskValue) {
+  if (diskValue.checked) {
+    isSsd = true;
+  } else {
+    isSsd = false;
+  };
 
-  getData()
-    .then(items => {
-      const result = res.filter(({ cpu, disk, gpu }) => {
-        if (diskValue.checked) {
-          return (
-            cpu.cores * cpu.count == core.value && disk.type == diskValue.value
-          );
-        }
+  if (raidValue.checked) {
+    isRaid = true;
+  } else {
+    isRaid = false;
+  };
 
-        return cpu.cores * cpu.count == core.value;
-      });
-
-      if (result.length == 0) {
-        container.innerHTML='Нет результатов'
-      };
-
-      for (let item of items) {
-        createCard(item, container);
-      }
-    });
-
-  form.addEventListener("change", () => {
-    filter(gpu, raid, ssd);
-  });
+  if (gpuValue.checked) {
+    isGpu = true;
+  } else {
+    isGpu = false;
+  };
 };
+
+form.addEventListener("change", () => {
+  filter(gpu, raid, ssd);
+  render(core, isGpu, isRaid, isSsd);
+});

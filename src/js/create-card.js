@@ -6,9 +6,9 @@ function createCard(data, container) {
 
   let cpuValue = data.cpu.name;
   if (data.cpu.count >= 2) {
-    cpuValue = `${data.cpu.count} x ${data.cpu.name} ${data.cpu.cores * data.cpu.count}&nbsp;${coreValue}`;
+    cpuValue = `${data.cpu.count} x ${data.cpu.name}&nbsp;${data.cpu.cores * data.cpu.count} ${coreValue}`;
   } else {
-    cpuValue = `${data.cpu.name} ${data.cpu.cores}&nbsp;${coreValue}`;
+    cpuValue = `${data.cpu.name} ${data.cpu.cores} ${coreValue}`;
   }
 
   let diskValue = data.disk.type;
