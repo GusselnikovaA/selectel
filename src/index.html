@@ -37,8 +37,7 @@
         <div class="container">
           <div class="hero-wrap">
             <h1 class="title hero__title">Надежные серверы для проектов любой сложности</h1>
-            <p class="hero__text">Выделенный сервер — это аренда сервера под задачи вашего проекта с возможностью свободно распоряжаться ресурсами машины и установки любого программного обеспечения.</p>
-            <button class="button hero__button"> Готовые серверы</button>
+            <p class="hero__text">Выделенный сервер — это аренда сервера под задачи вашего проекта с возможностью свободно распоряжаться ресурсами машины и установки любого программного обеспечения.</p><a class="hero__button" href="https://selectel.ru/" target="_blank">Готовые серверы</a>
           </div>
         </div>
       </section>
@@ -54,7 +53,7 @@
                     <div class="config-range__thumb" draggable="true"></div>
                   </div>
                 </div>
-                <div class="config-range__value"><span class="config-range__min">2</span><span class="config-range__active">6 ядер</span><span class="config-range__max">12</span></div>
+                <div class="config-range__value"><span class="config-range__min">2</span><span class="config-range__active"></span><span class="config-range__max">12</span></div>
               </div>
               <div class="config-checkbox">
                 <div class="config-checkbox__item">
@@ -74,20 +73,10 @@
           </form>
         </div>
       </section>
-      <section class="performance">
+      <section class="cards">
         <div class="container">
-          <h1 class="performance__title">Performance Line</h1>
-          <div class="card">
-            <div class="card-wrap card__wrap">
-              <h3 class="card__title">D8</h3>
-              <div class="card__about">
-                <div class="card-description">
-                  <p class="card-description__item card__cpu">2 × Intel Xeon   E-2236   3.4&nbsp;ГГц,&nbsp;6 ядер</p><span class="card-description__item card__ram">32 ГБ RAM</span><span class="card-description__item card__disc">460 ГБ SSD</span>
-                </div>
-                <div class="card__order"><span class="card__price">16 000 ₽/месяц</span><a class="button card__button" href="https://selectel.ru/" target="_blank">Заказать</a></div>
-              </div>
-            </div>
-          </div>
+          <h1 class="cards__title">Performance Line</h1>
+          <div class="cards-wrap"></div>
         </div>
       </section>
     </main>
@@ -97,26 +86,22 @@
           <div class="footer-icons">
             <div class="footer__logo"><a href="https://selectel.ru/" target="_blank"><img src="img/header/LOGO.svg" alt="logo selectel"></a></div>
             <ul class="list footer-social">
-              <li class="footer-social__item"><a href="https://vk.com/selectel" target="_blank"></a>
-                <svg class="footer__icon" width="22" height="23">
-                  <use xlink:href="#vk"></use>
-                </svg>
-              </li>
-              <li class="footer-social__item"><a href="https://twitter.com/selectel" target="_blank"></a>
-                <svg class="footer__icon" width="22" height="23">
-                  <use xlink:href="#twitter"></use>
-                </svg>
-              </li>
-              <li class="footer-social__item"><a href="https://www.facebook.com/selectel/" target="_blank"></a>
-                <svg class="footer__icon" width="22" height="23">
-                  <use xlink:href="#facebook"></use>
-                </svg>
-              </li>
-              <li class="footer-social__item"><a href="https://www.instagram.com/selectel.ru/" target="_blank"></a>
-                <svg class="footer__icon" width="22" height="23">
-                  <use xlink:href="#inst"></use>
-                </svg>
-              </li>
+              <li class="footer-social__item"><a href="https://vk.com/selectel" target="_blank">
+                  <svg class="footer__icon" width="22" height="23">
+                    <use xlink:href="#vk"></use>
+                  </svg></a></li>
+              <li class="footer-social__item"><a href="https://twitter.com/selectel" target="_blank">
+                  <svg class="footer__icon" width="22" height="23">
+                    <use xlink:href="#twitter"></use>
+                  </svg></a></li>
+              <li class="footer-social__item"><a href="https://www.facebook.com/selectel/" target="_blank">
+                  <svg class="footer__icon" width="22" height="23">
+                    <use xlink:href="#facebook"></use>
+                  </svg></a></li>
+              <li class="footer-social__item"><a href="https://www.instagram.com/selectel.ru/" target="_blank">
+                  <svg class="footer__icon" width="22" height="23">
+                    <use xlink:href="#inst"></use>
+                  </svg></a></li>
             </ul>
           </div>
           <nav class="footer-nav"> 
@@ -161,5 +146,7 @@
       </symbol>
     </svg>
     <script src="js/range.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/create-card.js"></script>
   </body>
 </html>

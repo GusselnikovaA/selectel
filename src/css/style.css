@@ -425,6 +425,13 @@ a {
   outline: none;
 }
 
+.loader {
+  width: 68px;
+  height: 68px;
+  margin: auto;
+  background: url("../img/loader.svg") no-repeat center center;
+}
+
 @media (min-width: 992px) {
   .header-contacts__phone:hover a, .header-contacts__mail:hover a, .header-contacts__telegram:hover a {
     color: #b5bdd1;
@@ -844,23 +851,29 @@ svg path {
   }
 }
 
-.performance {
+.cards {
   padding-bottom: 80px;
 }
 
-.performance__title {
+.cards__title {
   font-size: 18px;
   margin-bottom: 33px;
 }
 
 @media (max-width: 950px) {
-  .performance__title {
+  .cards {
+    padding-bottom: 60px;
+  }
+  .cards__title {
     margin-bottom: 20px;
   }
 }
 
 @media (max-width: 562px) {
-  .performance__title {
+  .cards {
+    padding-bottom: 32px;
+  }
+  .cards__title {
     font-size: 14px;
     margin-top: 0px;
     margin-bottom: 16px;
@@ -905,11 +918,11 @@ svg path {
 
 .card-description__item {
   margin: 0;
-  max-width: 128px;
+  width: 128px;
 }
 
 .card__cpu {
-  max-width: 110px;
+  max-width: 105px;
 }
 
 .card__order {
