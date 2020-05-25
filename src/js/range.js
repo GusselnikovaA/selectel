@@ -13,37 +13,38 @@ result.innerHTML = '6 ядер';
 function range(newLeft) {
   let rightEdge = slider.offsetWidth - thumb.offsetWidth + 3;
 
-  if (newLeft < points[0]) {
-    newLeft = 0;
-    core = 2;
-    result.innerHTML = '2 ядpa';
-  }
-  if (points[0] <= newLeft && newLeft < points[1]) {
-    newLeft = points[0];
-    core = 4;
-    result.innerHTML = '4 ядpa';
-  }
-  if (points[1] <= newLeft && newLeft < points[2]) {
-    newLeft = points[1];
-    core = 6;
-    result.innerHTML = '6 ядер';
-  }
-  if (points[2] <= newLeft && newLeft < points[3]) {
-    newLeft = points[2];
-    core = 8;
-    result.innerHTML = '8 ядер';
-  }
-  if (points[3] <= newLeft && newLeft < points[4]) {
-    newLeft = points[3];
-    core = 10;
-    result.innerHTML = '10 ядер';
-  }
-
-  if (points[4] < newLeft) {
-    newLeft = rightEdge;
-    core = 12;
-    result.innerHTML = '12 ядер';
-  }
+  switch(true) {
+    case newLeft < points[0]: 
+      newLeft = 0;
+      core = 2;
+      result.innerHTML = '2 ядpa';
+      break;
+    case points[0] <= newLeft && newLeft < points[1]: 
+      newLeft = points[0];
+      core = 4;
+      result.innerHTML = '4 ядpa';
+      break;
+    case points[1] <= newLeft && newLeft < points[2]: 
+      newLeft = points[1];
+      core = 6;
+      result.innerHTML = '6 ядер';
+      break;
+    case points[2] <= newLeft && newLeft < points[3]: 
+      newLeft = points[2];
+      core = 8;
+      result.innerHTML = '8 ядер';
+      break;
+    case points[3] <= newLeft && newLeft < points[4]: 
+      newLeft = points[3];
+      core = 10;
+      result.innerHTML = '10 ядер';
+      break;
+    case points[4] < newLeft: 
+      newLeft = rightEdge;
+      core = 12;
+      result.innerHTML = '12 ядер';
+      break;
+  };
 
   thumb.style.left = newLeft + 'px';
   activeSlider.style.width = newLeft + 'px';

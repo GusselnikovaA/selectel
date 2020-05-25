@@ -1,8 +1,11 @@
 const { series, src, dest } = require('gulp');
 const cleanCSS = require('gulp-clean-css');
 const imagemin = require('gulp-imagemin');
+const htmlmin = require('gulp-htmlmin');
 const uglify = require('gulp-uglify-es').default;
 const concat = require('gulp-concat');
+const babel = require('gulp-babel');
+const useref = require('gulp-useref');
 
 
 function minifyСss() {
@@ -12,10 +15,20 @@ function minifyСss() {
 }
 
 function minifyJS() {
-  return src(['./src/js/*.js'])
+  return src(['./src/js/*.+(js|min.js)'])
+        .pipe(babel({
+          presets: ['@babel/env']
+        }))
         .pipe(uglify())
         .pipe(concat('main.min.js'))
         .pipe(dest('dist/js/'));
+}
+
+function minifyHtml() {
+  return src('./src/*.html')
+        .pipe(useref())
+        .pipe(htmlmin({collapseWhitespace: true }))
+        .pipe(dest('dist/'));
 }
 
 function minImages(){
@@ -29,14 +42,9 @@ function moveFonts(){
         .pipe(dest('dist/fonts'));
 }
 
-function moveHtml(){
-  return src('./src/*.html')
-        .pipe(dest('dist'));
-}
-
-exports.build = series(minifyСss, minImages, minifyJS, moveFonts, moveHtml);
+exports.build = series(minifyСss, minImages, minifyJS, moveFonts, minifyHtml);
 exports.minifyСss = minifyСss;
 exports.minifyJS = minifyJS;
 exports.minImages = minImages;
 exports.moveFonts = moveFonts;
-exports.moveHtml = moveHtml;
+exports.minifyHtml = minifyHtml;

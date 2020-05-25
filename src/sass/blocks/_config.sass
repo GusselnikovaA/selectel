@@ -1,8 +1,8 @@
 .config 
-  padding-bottom: 66px
+  padding-bottom: 70px
   &__title 
     text-align: center
-    margin-bottom: 60px
+    margin-bottom: 69px
 
   &-wrap 
     display: flex
@@ -14,7 +14,7 @@
     flex-direction: column
     max-width: 367px
     // margin-right: 58px
-    width: 40%
+    width: 36%
     position: relative
 
     &__subtitle
@@ -58,7 +58,7 @@
     &__value 
       display: flex
       position: absolute
-      top: 17px
+      top: 15px
       right: 0
       width: 246px
       font-size: 12px
@@ -72,9 +72,10 @@
 
   &-checkbox 
     display: flex
-    justify-content: space-around
+    justify-content: space-between
+    padding-right: 50px
     align-items: center
-    width: 60%
+    width: 54%
 
     &__item 
       position: relative
@@ -115,21 +116,37 @@
 
 @media (max-width: 950px) 
   .config
+    padding-bottom: 53px
     &__title 
-      margin-bottom: 45px
+      margin-bottom: 50px
     &-range 
-      width: 50%
+      width: 46%
     &-checkbox 
       width: 45%
+      padding-right: 32px
+      &__subtitle 
+        padding-left: 26px
+      &__item
+        &:first-child 
+          margin-left: -3px
+
+@media (max-width: 720px)
+  .config 
+    &-range
+      width: 50%
+      &__line 
+        max-width: 204px
+      &__value 
+        max-width: 204px
 
 @media (max-width: 562px)
   .config 
-    padding-bottom: 37px
+    padding-bottom: 15px
     &-wrap 
       flex-direction: column
       padding-right: 9px
     &__title 
-      margin-bottom: 32px
+      margin-bottom: 35px
     &-range, &-checkbox 
       width: 100%
       &__subtitle 
@@ -138,14 +155,15 @@
       margin-bottom: 45px
       &__line 
         margin-top: 5px
-        max-width: 204px
       &__value 
-        max-width: 204px
+        top: 9px
     &-checkbox 
       flex-direction: column
       &__item 
         width: 100%
         margin-bottom: 22px
+      &__subtitle 
+        padding-left: 30px
 
 
 

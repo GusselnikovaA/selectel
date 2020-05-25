@@ -9,9 +9,11 @@
 
   &__logo 
     width: 112px
+    object-fit: cover
 
   &-contacts 
     width: 528px
+    padding-right: 10px
     display: flex
     justify-content: space-between
     align-items: center
@@ -29,9 +31,16 @@
     &__logo 
       width: 82px
     &-contacts
-      width: 115px
+      width: 116px
+      padding-right: 0
+      li 
+        &:last-child 
+          .header__icon 
+            margin-right: 0
       &__text 
         display: none
+    &__icon 
+      margin-right: 5px
 
 @media (max-width: 562px)
   .header
@@ -39,6 +48,8 @@
       padding: 11px 0px
     &__logo 
       width: 52px
+    &-contacts
+      width: 60px
     &__icon 
       width: 9px
 
