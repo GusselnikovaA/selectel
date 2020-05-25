@@ -31,18 +31,19 @@ function minifyHtml() {
         .pipe(dest('dist/'));
 }
 
-function minImages(){
+function minImages() {
   return src('./src/img/**/*.+(png|jpg|jpeg|svg)')
         .pipe(imagemin())
         .pipe(dest('dist/img'));
 }
 
-function moveFonts(){
+function moveFonts() {
   return src('./src/fonts/**/*')
         .pipe(dest('dist/fonts'));
 }
 
 exports.build = series(minifyСss, minImages, minifyJS, moveFonts, minifyHtml);
+
 exports.minifyСss = minifyСss;
 exports.minifyJS = minifyJS;
 exports.minImages = minImages;
