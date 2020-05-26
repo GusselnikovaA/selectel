@@ -20,7 +20,7 @@
   &-description
     display: flex
     justify-content: space-between
-    width: 60%
+    width: 81%
 
     &__item 
       margin: 0
@@ -29,7 +29,9 @@
   &__cpu 
     max-width: 105px
   &__ram 
-    padding-left: 27px
+    padding-left: 34px
+  &__disc 
+    padding-left: 6px
 
   &__order 
     display: flex
@@ -57,13 +59,15 @@
       margin-bottom: 16px
     &__title 
       margin-bottom: 21px
+    &-description 
+      width: 83%
     &__cpu 
       font-size: 16px
       max-width: 100%
     &__ram 
-      padding-left: 15px
+      padding-left: 7px
     &__disc 
-      padding-left: 15px
+      padding-left: 0px
     &__order 
       margin-top: -8px
       padding-right: 15px
@@ -92,22 +96,30 @@
       font-size: 12px
       margin-bottom: 15px
     &__about 
+      min-height: 165px
       flex-direction: column
+      align-content: space-between
     &-description 
       width: 100%
       flex-direction: column 
-      margin-bottom: 12px
+      padding-bottom: 24px
       &__item 
         width: 100%
-        margin-bottom: 24px
     &__cpu 
       font-size: 12px
       max-width: 100%
+      margin-bottom: 11px
     &__ram 
       padding-left: 0
+      margin: 11px 0
     &__disc 
       padding-left: 0
+      margin: 11px 0
+    &__gpu 
+      display: block
+      margin-top: 11px
     &__order 
+      margin-top: 0
       align-items: flex-start
     &__price 
       min-width: 100%

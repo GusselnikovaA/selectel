@@ -972,7 +972,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 60%;
+  width: 81%;
 }
 
 .card-description__item {
@@ -985,7 +985,11 @@ a {
 }
 
 .card__ram {
-  padding-left: 27px;
+  padding-left: 34px;
+}
+
+.card__disc {
+  padding-left: 6px;
 }
 
 .card__order {
@@ -1025,15 +1029,18 @@ a {
   .card__title {
     margin-bottom: 21px;
   }
+  .card-description {
+    width: 83%;
+  }
   .card__cpu {
     font-size: 16px;
     max-width: 100%;
   }
   .card__ram {
-    padding-left: 15px;
+    padding-left: 7px;
   }
   .card__disc {
-    padding-left: 15px;
+    padding-left: 0px;
   }
   .card__order {
     margin-top: -8px;
@@ -1069,10 +1076,13 @@ a {
     margin-bottom: 15px;
   }
   .card__about {
+    min-height: 165px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
   }
   .card-description {
     width: 100%;
@@ -1080,23 +1090,30 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-bottom: 12px;
+    padding-bottom: 24px;
   }
   .card-description__item {
     width: 100%;
-    margin-bottom: 24px;
   }
   .card__cpu {
     font-size: 12px;
     max-width: 100%;
+    margin-bottom: 11px;
   }
   .card__ram {
     padding-left: 0;
+    margin: 11px 0;
   }
   .card__disc {
     padding-left: 0;
+    margin: 11px 0;
+  }
+  .card__gpu {
+    display: block;
+    margin-top: 11px;
   }
   .card__order {
+    margin-top: 0;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
