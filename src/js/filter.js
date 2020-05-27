@@ -7,23 +7,9 @@ let isGpu = false;
 let isRaid = false;
 
 function filter (gpuValue, raidValue, diskValue) {
-  if (diskValue.checked) {
-    isSsd = true;
-  } else {
-    isSsd = false;
-  };
-
-  if (raidValue.checked) {
-    isRaid = true;
-  } else {
-    isRaid = false;
-  };
-
-  if (gpuValue.checked) {
-    isGpu = true;
-  } else {
-    isGpu = false;
-  };
+  diskValue.checked ? isSsd = true : isSsd = false;
+  raidValue.checked ? isRaid = true : isRaid = false;
+  gpuValue.checked ? isGpu = true : isGpu = false;
 };
 
 form.addEventListener("change", () => {

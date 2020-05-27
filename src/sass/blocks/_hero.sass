@@ -1,17 +1,10 @@
 .hero 
-  padding-top: 80px
-  min-height: 390px
-  background-image: url('../img/hero/image.svg') 
-  background-repeat: no-repeat
-  background-position: 87% 88%
-
   &__container
-    // padding-top: 80px
-    // padding-right: 80px
-    // min-height: 390px
-    // background-image: url('../img/hero/image.svg') 
-    // background-repeat: no-repeat
-    // background-position: 108% 88%
+    padding-top: 80px
+    min-height: 390px
+    background-image: url('../img/hero/image.png') 
+    background-repeat: no-repeat
+    background-position: 100% 90%
 
   &-wrap 
     max-width: 528px 
@@ -35,10 +28,11 @@
 
 @media (max-width: 950px) 
   .hero 
-    background-image: url('../img/hero/image-table.svg')
-    background-position: 93% 40%
-    min-height: 330px
-    padding-top: 64px
+    &__container
+      background-image: url('../img/hero/image-table.png')
+      background-position: 99% 39%
+      min-height: 330px
+      padding-top: 64px
     &-wrap 
       max-width: 413px
     &__title
@@ -52,9 +46,10 @@
 
 @media (max-width: 720px)
   .hero 
-    background-image: url('../img/hero/image-mobile.svg')
-    background-position: 80% 88%
-    padding: 28px 0
+    &__container
+      background-image: url('../img/hero/image-mobile.png')
+      background-position: 100% 88%
+      padding: 28px 0
     &__title 
       line-height: 120%
     &__text 
@@ -66,5 +61,7 @@
 
 @media (max-width: 562px)
   .hero 
-    min-height: 390px
-    background-position: 75% 85%
+    &__container
+      min-height: 390px
+      background-position: 88% 84%
+      padding: 24px 0
